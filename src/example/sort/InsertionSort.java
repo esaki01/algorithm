@@ -24,7 +24,7 @@ public class InsertionSort {
             int k = i; // 挿入するデータの添字をkに代入
             while (k > 0 && data[k - 1] > tmp) {
                 data[k] = data[k - 1]; // 挿入したいデータより大きいデータを後ろの要素に移動する（data[k - 1]が空く）
-                k -= 1;
+                k--;
             }
             data[k] = tmp; // 空いた要素にデータを挿入する
         }

@@ -32,9 +32,9 @@ public class BubbleSort {
                     data[i - 1] = data[i];
                     data[i] = tmp;
                 }
-                i -= 1; // 1つ左の要素に移動する
+                i--; // 1つ左の要素に移動する
             }
-            k += 1; // データを確定
+            k++; // データを確定
         }
         return data;
     }
