@@ -21,7 +21,7 @@ public class SelectionSort {
         for (int i = 0; i < data.length; i++) {
             // 最小値を探す処理
             int indexMin = i;
-            for (int k = i + 1; k < 5; k++) {
+            for (int k = i + 1; k < data.length; k++) {
                 if (data[k] < data[indexMin]) {
                     indexMin = k;
                 }
