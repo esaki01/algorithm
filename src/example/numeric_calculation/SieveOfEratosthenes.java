@@ -18,10 +18,10 @@ public class SieveOfEratosthenes {
     public static void main(String[] args) {
         int[] data = new int[101]; // 配列は素数を求めたい範囲＋1
         Arrays.fill(data, 1);
-        System.out.printf("素数：%s", sieve(data));
+        System.out.printf("素数：%s", calculate(data));
     }
 
-    private static List<Integer> sieve(int[] data) {
+    private static List<Integer> calculate(int[] data) {
         // kがデータ数−1の平方根以下の間繰り返す
         for (int k = 2; k * k <= data.length - 1;) {
             // 素数kの倍数を取り除く
