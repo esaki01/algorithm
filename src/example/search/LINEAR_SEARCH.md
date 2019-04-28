@@ -15,3 +15,6 @@
 ## Reference
 - [楽しく学ぶ　アルゴリズムとプログラミングの図鑑](https://book.mynavi.jp/manatee/detail/id=64253)
 - [若手プログラマー保存版！フローチャート徹底解説と作成カンニングペーパー](https://it-koala.com/flowchart-2241#i-15)
+
+## Additional
+- [番兵法](https://blog.codebook-10000.com/entry/20131218/1387373524)

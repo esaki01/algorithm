@@ -17,23 +17,28 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] data = {11, 13, 17, 19, 23, 29, 31};
         int target = 17;
-        search(data, target);
+
+        int index = search(data, target);
+        if (index == -1) {
+            System.out.printf("%dは見つかりませんでした.", target);
+        } else {
+            System.out.printf("%d番目の要素に%dが格納されています.", index, target);
+        }
     }
 
-    private static void search(int[] data, int target) {
+    private static int search(int[] data, int target) {
         int head = 0;
         int tail = data.length - 1;
         while (head <= tail) {
             int center = (head + tail) / 2;
             if (data[center] == target) {
-                System.out.printf("%d番目の要素に%dが格納されています.", center, target);
-                return;
+                return center;
             } else if (data[center] < target) {
                 head = center + 1;
             } else {
                 tail = center - 1;
             }
         }
-        System.out.printf("%dは見つかりませんでした.", target);
+        return -1;
     }
 }

@@ -36,7 +36,7 @@ public class Hashing {
 
     private static int[] store(int[] data) {
         int[] hashedData = new int[11];
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < data.length; i++) {
             int k = hash(data[i]);
             if (hashedData[k] != 0) {
                 k = (k + 1) % 11;

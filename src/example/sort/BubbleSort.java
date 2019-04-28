@@ -21,20 +21,17 @@ public class BubbleSort {
     }
 
     private static int[] sort(int[] data) {
-        int k = 0;
-        while (k < data.length - 1) {
-            // 最小値を移動する処理
-            int i = data.length - 1;
-            while (i > k) {
+        for (int k = 0; k < data.length; k++) {
+            // 最小値を左端に移動する処理
+            for (int i = data.length - 1; i > k; i--) {
                 if (data[i - 1] > data[i]) {
-                    // 入れ替える処理
+                    // 昇順になっていなければ入れ替える
                     int tmp = data[i - 1];
                     data[i - 1] = data[i];
                     data[i] = tmp;
                 }
-                i--; // 1つ左の要素に移動する
             }
-            k++; // データを確定
+            // 左端の要素が1つ確定
         }
         return data;
     }

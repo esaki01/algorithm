@@ -2,11 +2,11 @@
 
 ## Overview
 
-![image](https://user-images.githubusercontent.com/44774033/56825901-93c3a880-6895-11e9-8240-ec0070a4a5b4.png)
+![image](https://user-images.githubusercontent.com/44774033/56825917-a0e09780-6895-11e9-98d4-5b29f0f20605.png)
 
 ## Flowchart
 
-![image](https://user-images.githubusercontent.com/44774033/56825917-a0e09780-6895-11e9-98d4-5b29f0f20605.png)
+![image](https://user-images.githubusercontent.com/44774033/56825901-93c3a880-6895-11e9-8240-ec0070a4a5b4.png)
 
 ## Reference
 - [バブルソート：アルゴリズム](https://www.codereading.com/algo_and_ds/algo/bubble_sort.html)
