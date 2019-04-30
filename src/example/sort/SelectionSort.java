@@ -18,9 +18,9 @@ public class SelectionSort {
     }
 
     private static int[] sort(int[] data) {
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 0; i < data.length - 1; i++) {
             // 最小値を探す処理
-            int indexMin = i;
+            int indexMin = i; // 未ソート部の最小要素のインデックス
             for (int k = i + 1; k < data.length; k++) {
                 if (data[k] < data[indexMin]) {
                     indexMin = k;

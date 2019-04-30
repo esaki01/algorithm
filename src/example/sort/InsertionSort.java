@@ -21,10 +21,9 @@ public class InsertionSort {
         for (int i = 1; i < data.length; i++) {
             // 1つのデータを正しい位置に挿入する処理
             int tmp = data[i]; // 挿入するデータをtmpに代入
-            int k = i; // 挿入するデータの添字をkに代入
-            while (k > 0 && data[k - 1] > tmp) {
+            int k; // 挿入するデータの添字をkに代入
+            for (k = i; k > 0 && data[k - 1] > tmp; k--) {
                 data[k] = data[k - 1]; // 挿入したいデータより大きいデータを後ろの要素に移動する（data[k - 1]が空く）
-                k--;
             }
             data[k] = tmp; // 空いた要素にデータを挿入する
         }

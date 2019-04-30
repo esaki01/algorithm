@@ -21,7 +21,7 @@ public class BubbleSort {
     }
 
     private static int[] sort(int[] data) {
-        for (int k = 0; k < data.length; k++) {
+        for (int k = 0; k < data.length - 1; k++) {
             // 最小値を左端に移動する処理
             for (int i = data.length - 1; i > k; i--) {
                 if (data[i - 1] > data[i]) {
@@ -32,6 +32,27 @@ public class BubbleSort {
                 }
             }
             // 左端の要素が1つ確定
+        }
+        return data;
+    }
+
+    private static int[] sort2(int[] data) {
+        for (int k = 0; k < data.length - 1; k++) {
+            // 最小値を左端に移動する処理
+            int exchange = 0; // 交換回数
+            for (int i = data.length - 1; i > k; i--) {
+                if (data[i - 1] > data[i]) {
+                    // 昇順になっていなければ入れ替える
+                    int tmp = data[i - 1];
+                    data[i - 1] = data[i];
+                    data[i] = tmp;
+
+                    exchange++;
+                }
+            } // 左端の要素が1つ確定
+            if (exchange == 0) { // 交換が行われなかったら終了
+                break;
+            }
         }
         return data;
     }
