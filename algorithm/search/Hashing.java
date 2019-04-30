@@ -18,6 +18,7 @@ import search.base.BaseSearch;
 
 public class Hashing extends BaseSearch {
 
+    /** ハッシュ化された検索範囲のデータ配列. */
     private int[] hashData;
 
     Hashing(int[] data, int target) {
@@ -37,6 +38,12 @@ public class Hashing extends BaseSearch {
         return -1;
     }
 
+    /**
+     * データ配列をハッシュ化し、別のデータ配列に格納する.
+     *
+     * @param data 検索範囲のデータ配列
+     * @return ハッシュ化された検索範囲のデータ配列
+     */
     private static int[] store(int[] data) {
         int[] hashedData = new int[11];
         for (int i = 0; i < data.length; i++) {
@@ -49,6 +56,12 @@ public class Hashing extends BaseSearch {
         return hashedData;
     }
 
+    /**
+     * データをハッシュ化する.
+     *
+     * @param value ハッシュ化したいデータ
+     * @return ハッシュ化されたデータ
+     */
     private static int hash(int value) {
         return value % 11;
     }
