@@ -9,9 +9,9 @@ POINT
  */
 package sort;
 
-import sort.base.BaseSort;
+import sort.abstract_object.AbstractSort;
 
-public class InsertionSort extends BaseSort {
+public class InsertionSort extends AbstractSort {
 
     InsertionSort(int[] data) {
         super(data);

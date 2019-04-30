@@ -13,9 +13,9 @@ POINT
  */
 package sort;
 
-import sort.base.BaseSort;
+import sort.abstract_object.AbstractSort;
 
-public class ShellSort extends BaseSort {
+public class ShellSort extends AbstractSort {
 
     ShellSort(int[] data) {
         super(data);

@@ -4,9 +4,9 @@
  */
 package search;
 
-import search.base.BaseSearch;
+import search.abstract_object.AbstractSearch;
 
-public class LinearSearch extends BaseSearch {
+public class LinearSearch extends AbstractSearch {
 
     LinearSearch(int[] data, int target) {
         super(data, target);

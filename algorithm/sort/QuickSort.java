@@ -10,9 +10,9 @@ POINT
  */
 package sort;
 
-import sort.base.BaseSort;
+import sort.abstract_object.AbstractSort;
 
-public class QuickSort extends BaseSort {
+public class QuickSort extends AbstractSort {
 
     private int left;
     private int right;

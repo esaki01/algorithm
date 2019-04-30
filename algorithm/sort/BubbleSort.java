@@ -12,9 +12,9 @@ POINT
  */
 package sort;
 
-import sort.base.BaseSort;
+import sort.abstract_object.AbstractSort;
 
-public class BubbleSort extends BaseSort {
+public class BubbleSort extends AbstractSort {
 
     BubbleSort(int[] data) {
         super(data);

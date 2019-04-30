@@ -14,9 +14,9 @@ POINT
  */
 package search;
 
-import search.base.BaseSearch;
+import search.abstract_object.AbstractSearch;
 
-public class Hashing extends BaseSearch {
+public class Hashing extends AbstractSearch {
 
     /** ハッシュ化された検索範囲のデータ配列. */
     private int[] hashData;

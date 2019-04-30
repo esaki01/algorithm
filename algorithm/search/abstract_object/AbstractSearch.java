@@ -1,6 +1,6 @@
-package search.base;
+package search.abstract_object;
 
-public abstract class BaseSearch {
+public abstract class AbstractSearch {
 
     /** 検索範囲のデータ配列. */
     protected int[] data;
@@ -8,7 +8,7 @@ public abstract class BaseSearch {
     /** 検索対象の数値. */
     protected int target;
 
-    public BaseSearch(int[] data, int target) {
+    protected AbstractSearch(int[] data, int target) {
         this.data = data;
         this.target = target;
     }

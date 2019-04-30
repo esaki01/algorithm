@@ -1,11 +1,11 @@
-package sort.base;
+package sort.abstract_object;
 
-public abstract class BaseSort {
+public abstract class AbstractSort {
 
     /** ソートしたいデータ. */
     protected int[] data;
 
-    public BaseSort(int[] data) {
+    protected AbstractSort(int[] data) {
         this.data = data;
     }
 

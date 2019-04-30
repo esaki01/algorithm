@@ -13,9 +13,9 @@ POINT
  */
 package search;
 
-import search.base.BaseSearch;
+import search.abstract_object.AbstractSearch;
 
-public class BinarySearch extends BaseSearch {
+public class BinarySearch extends AbstractSearch {
 
     BinarySearch(int[] data, int target) {
         super(data, target);
