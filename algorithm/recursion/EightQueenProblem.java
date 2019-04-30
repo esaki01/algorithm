@@ -6,10 +6,17 @@ package recursion;
 
 public class EightQueenProblem {
 
-    private static boolean[] flag_a = new boolean[8]; // 各行に王妃が配置済みか
-    private static boolean[] flag_b = new boolean[15]; // ／対角線に王妃が配置済みか
-    private static boolean[] flag_c = new boolean[15]; // ＼対角線に王妃が配置済みか
-    private static int[] pos = new int[8]; // 各列の王妃の位置
+    /** 各行に王妃が配置済みか. */
+    private static boolean[] flag_a = new boolean[8];
+
+    /** ／対角線に王妃が配置済みか. */
+    private static boolean[] flag_b = new boolean[15];
+
+    /** ＼対角線に王妃が配置済みか. */
+    private static boolean[] flag_c = new boolean[15];
+
+    /** 各列の王妃の位置. */
+    private static int[] pos = new int[8];
 
     /**
      * i列目の適切な位置に王妃を配置
