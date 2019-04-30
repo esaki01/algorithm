@@ -8,20 +8,28 @@ POINT
 - 平方根以下の素数の倍数を取り除く
 - 最後まで残った数を素数として出力する
  */
-package example.numeric_calculation;
+package numeric_calculation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class SieveOfEratosthenes {
-    public static void main(String[] args) {
-        int[] data = new int[101]; // 配列は素数を求めたい範囲＋1
+
+    /** 素数を見つけ出す範囲のデータ. */
+    private int[] data;
+
+    SieveOfEratosthenes(int[] data) {
         Arrays.fill(data, 1);
-        System.out.printf("素数：%s", calculate(data));
+        this.data = data;
     }
 
-    private static List<Integer> calculate(int[] data) {
+    /**
+     * 数値の配列から素数を見つけ出す.
+     *
+     * @return 素数のリスト
+     */
+    public List<Integer> calculate() {
         // kがデータ数−1の平方根以下の間繰り返す
         for (int k = 2; k * k <= data.length - 1;) {
             // 素数kの倍数を取り除く

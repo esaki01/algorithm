@@ -11,22 +11,18 @@ POINT
 
 配列の端（先頭）の添字が端（末尾）よりも大きくなった場合は、目的のデータは見つからなかったと言うことができる.
  */
-package example.search;
+package search;
 
-public class BinarySearch {
-    public static void main(String[] args) {
-        int[] data = {11, 13, 17, 19, 23, 29, 31};
-        int target = 17;
+import search.base.BaseSearch;
 
-        int index = search(data, target);
-        if (index == -1) {
-            System.out.printf("%dは見つかりませんでした.", target);
-        } else {
-            System.out.printf("%d番目の要素に%dが格納されています.", index, target);
-        }
+public class BinarySearch extends BaseSearch {
+
+    BinarySearch(int[] data, int target) {
+        super(data, target);
     }
 
-    private static int search(int[] data, int target) {
+    @Override
+    public int search() {
         int head = 0;
         int tail = data.length - 1;
         while (head <= tail) {

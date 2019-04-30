@@ -7,17 +7,18 @@ POINT
 - 探索範囲の最小値を探す処理
 - 探索範囲の最小値を先頭要素と交換する処理
  */
-package example.sort;
+package sort;
 
-import java.util.Arrays;
+import sort.base.BaseSort;
 
-public class SelectionSort {
-    public static void main(String[] args) {
-        int[] data = {12, 13, 11, 14, 10};
-        System.out.printf("ソート後のデータ：%s", Arrays.toString(sort(data)));
+public class SelectionSort extends BaseSort {
+
+    SelectionSort(int[] data) {
+        super(data);
     }
 
-    private static int[] sort(int[] data) {
+    @Override
+    public void sort() {
         for (int i = 0; i < data.length - 1; i++) {
             // 最小値を探す処理
             int indexMin = i; // 未ソート部の最小要素のインデックス
@@ -31,6 +32,5 @@ public class SelectionSort {
             data[i] = data[indexMin]; // 最小値が入っている要素のデータを先頭の要素に代入する
             data[indexMin] = tmp; // 先頭の要素のデータを最小値が入っている要素に代入する
         }
-        return data;
     }
 }

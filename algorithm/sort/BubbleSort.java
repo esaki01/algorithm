@@ -10,17 +10,18 @@ POINT
   - 1つ左の要素に移動する
 - 左端の要素から1つずつ順番に、データを確定させていく
  */
-package example.sort;
+package sort;
 
-import java.util.Arrays;
+import sort.base.BaseSort;
 
-public class BubbleSort {
-    public static void main(String[] args) {
-        int[] data = {5, 3, 4, 1, 2};
-        System.out.printf("ソート後のデータ：%s", Arrays.toString(sort(data)));
+public class BubbleSort extends BaseSort {
+
+    BubbleSort(int[] data) {
+        super(data);
     }
 
-    private static int[] sort(int[] data) {
+    @Override
+    public void sort() {
         for (int k = 0; k < data.length - 1; k++) {
             // 最小値を左端に移動する処理
             for (int i = data.length - 1; i > k; i--) {
@@ -33,10 +34,9 @@ public class BubbleSort {
             }
             // 左端の要素が1つ確定
         }
-        return data;
     }
 
-    private static int[] sort2(int[] data) {
+    public void sort2() {
         for (int k = 0; k < data.length - 1; k++) {
             // 最小値を左端に移動する処理
             int exchange = 0; // 交換回数
@@ -54,6 +54,5 @@ public class BubbleSort {
                 break;
             }
         }
-        return data;
     }
 }

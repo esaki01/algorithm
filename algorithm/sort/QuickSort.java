@@ -8,17 +8,27 @@ POINT
 - 基準値を境にして、データを大小に分ける処理
 - 分けたデータに対して繰り返し同じ処理を実行する
  */
-package example.sort;
+package sort;
 
-import java.util.Arrays;
+import sort.base.BaseSort;
 
-public class QuickSort {
-    public static void main(String[] args) {
-        int[] data = {5, 4, 7, 6, 8, 3, 1, 2, 9};
-        System.out.printf("ソート後のデータ：%s", Arrays.toString(sort(data, 0, data.length - 1)));
+public class QuickSort extends BaseSort {
+
+    private int left;
+    private int right;
+
+    QuickSort(int[] data, int left, int right) {
+        super(data);
+        this.left = left;
+        this.right = right;
     }
 
-    private static int[] sort(int[] data, int left, int right) {
+    @Override
+    public void sort() {
+        sort(left, right);
+    }
+
+    private void sort(int left, int right) {
         // 基準値を境にして、データを大小に分ける処理
         int i = left + 1;
         int k = right;
@@ -42,11 +52,10 @@ public class QuickSort {
         }
         // 分けたデータに対して繰り返し同じ処理を実行する処理
         if (left < k - 1) {
-            sort(data, left, k - 1);
+            sort(left, k - 1);
         }
         if (k + 1 < right) {
-            sort(data, k + 1, right);
+            sort(k + 1, right);
         }
-        return data;
     }
 }

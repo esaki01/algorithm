@@ -12,26 +12,29 @@ POINT
 - ハッシュ関数でデータを格納するアルゴリズム
 - ハッシュ関数でデータを探索するアルゴリズム
  */
-package example.search;
+package search;
 
-public class Hashing {
-    public static void main(String[] args) {
-        int[] data = {12, 25, 36, 20, 30, 8, 42};
-        int[] hashedData = store(data);
-        int target = 36;
-        search(hashedData, target);
+import search.base.BaseSearch;
+
+public class Hashing extends BaseSearch {
+
+    private int[] hashData;
+
+    Hashing(int[] data, int target) {
+        super(data, target);
+        this.hashData = store(data);
     }
 
-    private static void search(int[] hashedData, int target) {
+    @Override
+    public int search() {
         int k = hash(target);
-        while (hashedData[k] != 0) {
-            if (hashedData[k] == target) {
-                System.out.printf("%d番目の要素に%dが格納されています.", k, target);
-                return;
+        while (hashData[k] != 0) {
+            if (hashData[k] == target) {
+                return k;
             }
             k = (k + 1) % 11;
         }
-        System.out.printf("%dは見つかりませんでした.", target);
+        return -1;
     }
 
     private static int[] store(int[] data) {

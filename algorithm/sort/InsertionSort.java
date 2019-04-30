@@ -7,17 +7,18 @@ POINT
 - 挿入したいデータを、整列済みデータと順番に比較していく
 - 挿入したいデータより小さいデータが見つかったら、その後ろの要素に挿入する
  */
-package example.sort;
+package sort;
 
-import java.util.Arrays;
+import sort.base.BaseSort;
 
-public class InsertionSort {
-    public static void main(String[] args) {
-        int[] data = {5, 3, 4, 1, 2};
-        System.out.printf("ソート後のデータ：%s", Arrays.toString(sort(data)));
+public class InsertionSort extends BaseSort {
+
+    InsertionSort(int[] data) {
+        super(data);
     }
 
-    private static int[] sort(int[] data) {
+    @Override
+    public void sort() {
         for (int i = 1; i < data.length; i++) {
             // 1つのデータを正しい位置に挿入する処理
             int tmp = data[i]; // 挿入するデータをtmpに代入
@@ -27,6 +28,5 @@ public class InsertionSort {
             }
             data[k] = tmp; // 空いた要素にデータを挿入する
         }
-        return data;
     }
 }
