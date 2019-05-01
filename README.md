@@ -11,4 +11,4 @@ This repository is for understanding "algorithm".
 - [アルゴリズムを、はじめよう](https://www.amazon.co.jp/アルゴリズムを、はじめよう-伊藤-静香-ebook/dp/B01CZDTINE)
 
 ## Memo
-- [アルゴリズムリスト](./MEMO.md)
+- [アルゴリズムリスト](./ALGORITHM_LIST.md)
