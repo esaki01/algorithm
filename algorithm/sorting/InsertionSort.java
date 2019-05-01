@@ -7,9 +7,9 @@ POINT
 - 挿入したいデータを、整列済みデータと順番に比較していく
 - 挿入したいデータより小さいデータが見つかったら、その後ろの要素に挿入する
  */
-package sort;
+package sorting;
 
-import sort.abstract_object.AbstractSort;
+import sorting.abstract_object.AbstractSort;
 
 public class InsertionSort extends AbstractSort {
 

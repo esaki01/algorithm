@@ -11,9 +11,9 @@ POINT
   - 左の子はdata[i * 2 + 1]
   - 右の子はdata[i * 2 + 2]
  */
-package sort;
+package sorting;
 
-import sort.abstract_object.AbstractSort;
+import sorting.abstract_object.AbstractSort;
 
 public class HeapSort extends AbstractSort {
 

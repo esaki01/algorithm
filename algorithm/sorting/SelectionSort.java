@@ -7,9 +7,9 @@ POINT
 - 探索範囲の最小値を探す処理
 - 探索範囲の最小値を先頭要素と交換する処理
  */
-package sort;
+package sorting;
 
-import sort.abstract_object.AbstractSort;
+import sorting.abstract_object.AbstractSort;
 
 public class SelectionSort extends AbstractSort {
 

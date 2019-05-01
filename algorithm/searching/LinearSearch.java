@@ -2,9 +2,9 @@
 線形探索法（リニアサーチ）.
 先頭から順番に調べて探す探索アルゴリズム.
  */
-package search;
+package searching;
 
-import search.abstract_object.AbstractSearch;
+import searching.abstract_object.AbstractSearch;
 
 public class LinearSearch extends AbstractSearch {
 

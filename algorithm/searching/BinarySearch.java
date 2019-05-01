@@ -11,9 +11,9 @@ POINT
 
 配列の端（先頭）の添字が端（末尾）よりも大きくなった場合は、目的のデータは見つからなかったと言うことができる.
  */
-package search;
+package searching;
 
-import search.abstract_object.AbstractSearch;
+import searching.abstract_object.AbstractSearch;
 
 public class BinarySearch extends AbstractSearch {
 

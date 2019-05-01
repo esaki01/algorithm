@@ -10,9 +10,9 @@ POINT
   - 1つ左の要素に移動する
 - 左端の要素から1つずつ順番に、データを確定させていく
  */
-package sort;
+package sorting;
 
-import sort.abstract_object.AbstractSort;
+import sorting.abstract_object.AbstractSort;
 
 public class BubbleSort extends AbstractSort {
 

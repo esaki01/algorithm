@@ -1,4 +1,4 @@
-package search;
+package searching;
 
 import org.junit.jupiter.api.Test;
 

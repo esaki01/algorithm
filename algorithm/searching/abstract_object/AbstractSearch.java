@@ -1,4 +1,4 @@
-package search.abstract_object;
+package searching.abstract_object;
 
 public abstract class AbstractSearch {
 

@@ -8,9 +8,9 @@ POINT
 - 基準値を境にして、データを大小に分ける処理
 - 分けたデータに対して繰り返し同じ処理を実行する
  */
-package sort;
+package sorting;
 
-import sort.abstract_object.AbstractSort;
+import sorting.abstract_object.AbstractSort;
 
 public class QuickSort extends AbstractSort {
 

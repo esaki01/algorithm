@@ -11,9 +11,9 @@ POINT
 - 離れた要素をグループ化して大まかなソートを行う
 - グループを縮小しながらソートを繰り返す
  */
-package sort;
+package sorting;
 
-import sort.abstract_object.AbstractSort;
+import sorting.abstract_object.AbstractSort;
 
 public class ShellSort extends AbstractSort {
 

@@ -12,9 +12,9 @@ POINT
 - ハッシュ関数でデータを格納するアルゴリズム
 - ハッシュ関数でデータを探索するアルゴリズム
  */
-package search;
+package searching;
 
-import search.abstract_object.AbstractSearch;
+import searching.abstract_object.AbstractSearch;
 
 public class Hashing extends AbstractSearch {
 

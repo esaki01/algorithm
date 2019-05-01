@@ -9,9 +9,9 @@ POINT
 - 配列を整列する
 - 2つの配列をマージしてひとつの整列済み配列にする
  */
-package sort;
+package sorting;
 
-import sort.abstract_object.AbstractSort;
+import sorting.abstract_object.AbstractSort;
 
 public class MergeSort extends AbstractSort {
 

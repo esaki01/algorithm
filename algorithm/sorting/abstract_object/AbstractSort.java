@@ -1,4 +1,4 @@
-package sort.abstract_object;
+package sorting.abstract_object;
 
 public abstract class AbstractSort {
 
