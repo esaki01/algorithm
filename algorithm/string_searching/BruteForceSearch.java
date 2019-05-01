@@ -26,6 +26,7 @@ public class BruteForceSearch extends AbstractStringSearch {
                 pp = 0; // パターンを照合する位置を先頭に戻す
             }
         }
+
         if (pp == pattern.length()) { // 探索成功
             return pt - pp;
         }
