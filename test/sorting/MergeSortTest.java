@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MergeSortTest {
 
     @Test
-    void sort() {
+    void sortTest() {
         int[] data = {22, 5, 11, 32, 120, 68, 70};
         int[] expected = {5, 11, 22, 32, 68, 70, 120};
 
