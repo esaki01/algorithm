@@ -14,7 +14,10 @@ import sort.abstract_object.AbstractSort;
 
 public class QuickSort extends AbstractSort {
 
+    /** 左端の要素のインデックス. */
     private int left;
+
+    /** 左端の要素のインデックス. */
     private int right;
 
     QuickSort(int[] data, int left, int right) {
@@ -26,36 +29,40 @@ public class QuickSort extends AbstractSort {
     @Override
     public void sort() {
         sort(left, right);
+        for (int i : data) {
+            System.out.println(i);
+        }
     }
 
     private void sort(int left, int right) {
         // 基準値を境にして、データを大小に分ける処理
-        int i = left + 1;
-        int k = right;
-        while (i < k) {
-            while (data[i] < data[left] && i < right) {
-                i++;
+        int pl = left; // 左カーソル
+        int pr = right; // 右カーソル
+        int pivot = data[(pl + pr) / 2]; // 枢軸（中央の要素）
+
+        while (pl <= pr) {
+            while (data[pl] < pivot && pl < right) {
+                pl++; // 枢軸より大きい値を探す
             }
-            while (data[k] >= data[left] && k > left) {
-                k--;
+            while (data[pr] > pivot && pr > left) {
+                pr--; // 枢軸より小さい値を探す
             }
-            if (i < k) {
-                int tmp = data[i];
-                data[i] = data[k];
-                data[k] = tmp;
+            if (pl <= pr) {
+                int tmp = data[pl];
+                data[pl] = data[pr];
+                data[pr] = tmp;
+
+                pl++;
+                pr--;
             }
-        }
-        if (data[left] > data[k]) {
-            int tmp = data[left];
-            data[left] = data[k];
-            data[k] = tmp;
-        }
+        } // plとprが交差すれば終了
+
         // 分けたデータに対して繰り返し同じ処理を実行する処理
-        if (left < k - 1) {
-            sort(left, k - 1);
+        if (left < pr) {
+            sort(left, pr);
         }
-        if (k + 1 < right) {
-            sort(k + 1, right);
+        if (pl < right) {
+            sort(pl, right);
         }
     }
 }
