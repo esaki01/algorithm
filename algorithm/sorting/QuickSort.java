@@ -29,9 +29,6 @@ public class QuickSort extends AbstractSort {
     @Override
     public void sort() {
         sort(left, right);
-        for (int i : data) {
-            System.out.println(i);
-        }
     }
 
     private void sort(int left, int right) {
