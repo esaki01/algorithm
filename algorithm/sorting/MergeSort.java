@@ -11,32 +11,20 @@ POINT
  */
 package sorting;
 
-import sorting.abstract_object.AbstractSort;
-
-public class MergeSort extends AbstractSort {
+public class MergeSort {
 
     /** マージ結果を一時的に格納するための作業用配列. */
-    private int[] buff;
+    private static int[] buff;
 
-    /** 左端の要素のインデックス. */
-    private int left;
+    public static void sort(int[] data, int left, int right) {
+        buff = new int[data.length];
 
-    /** 右端の要素のインデックス. */
-    private int right;
+        mergeSort(data, left, right); // 配列全体をマージソート
 
-    MergeSort(int[] data, int left, int right) {
-        super(data);
-        this.left = left;
-        this.right = right;
-        this.buff = new int[data.length];
+        buff = null;
     }
 
-    @Override
-    public void sort() {
-        sort(left, right); // 配列全体をマージソート
-    }
-
-    private void sort(int left, int right) {
+    private static void mergeSort(int[] data, int left, int right) {
         if (left < right) {
             int i; // 配列dataのインデックス
             int center = (left + right) / 2;
@@ -44,8 +32,8 @@ public class MergeSort extends AbstractSort {
             int j = 0;
             int k = left;
 
-            sort(left, center); // 前半部をマージソート
-            sort(center + 1, right); // 後半部をマージソート
+            mergeSort(data, left, center); // 前半部をマージソート
+            mergeSort(data, center + 1, right); // 後半部をマージソート
 
             //--- マージする ---//
             // 配列dataの前半部を配列buffにコピーする

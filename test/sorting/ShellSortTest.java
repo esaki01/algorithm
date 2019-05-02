@@ -11,8 +11,7 @@ class ShellSortTest {
         int[] data = {7, 1, 3, 2, 8, 6, 4, 5};
         int[] expected = {1, 2, 3, 4, 5, 6, 7, 8};
 
-        ShellSort shellSort = new ShellSort(data);
-        shellSort.sort();
+        ShellSort.sort(data);
 
         assertArrayEquals(expected, data);
     }

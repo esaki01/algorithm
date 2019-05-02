@@ -5,16 +5,9 @@ KMP（Knuth-Morris-Pratt）法.
  */
 package string_searching;
 
-import string_searching.abstract_object.AbstractStringSearch;
+public class KnuthMorrisPratt {
 
-public class KnuthMorrisPratt extends AbstractStringSearch {
-
-    KnuthMorrisPratt(String text, String pattern) {
-        super(text, pattern);
-    }
-
-    @Override
-    public int search() {
+    public static int search(String text, String pattern) {
         int pt = 1; // textを照合する位置
         int pp = 0; // patternを照合する位置
         int[] skip = new int[pattern.length() + 1]; // スキップテーブル

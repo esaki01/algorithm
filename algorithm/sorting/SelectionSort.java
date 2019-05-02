@@ -9,16 +9,9 @@ POINT
  */
 package sorting;
 
-import sorting.abstract_object.AbstractSort;
+public class SelectionSort {
 
-public class SelectionSort extends AbstractSort {
-
-    SelectionSort(int[] data) {
-        super(data);
-    }
-
-    @Override
-    public void sort() {
+    public static void sort(int[] data) {
         for (int i = 0; i < data.length - 1; i++) {
             // 最小値を探す処理
             int indexMin = i; // 未ソート部の最小要素のインデックス

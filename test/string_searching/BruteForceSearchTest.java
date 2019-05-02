@@ -13,8 +13,7 @@ class BruteForceSearchTest {
         String pattern = "漢字";
         int expected = 3;
 
-        BruteForceSearch bruteForceSearch = new BruteForceSearch(text, pattern);
-        int actual = bruteForceSearch.search();
+        int actual = BruteForceSearch.search(text, pattern);
 
         assertEquals(expected, actual);
     }
@@ -24,8 +23,7 @@ class BruteForceSearchTest {
         String pattern = "漢方";
         int expected = -1;
 
-        BruteForceSearch bruteForceSearch = new BruteForceSearch(text, pattern);
-        int actual = bruteForceSearch.search();
+        int actual = BruteForceSearch.search(text, pattern);
 
         assertEquals(expected, actual);
     }

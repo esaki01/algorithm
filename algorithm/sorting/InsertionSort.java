@@ -9,22 +9,14 @@ POINT
  */
 package sorting;
 
-import sorting.abstract_object.AbstractSort;
+public class InsertionSort {
 
-public class InsertionSort extends AbstractSort {
-
-    InsertionSort(int[] data) {
-        super(data);
-    }
-
-    @Override
-    public void sort() {
-        for (int i = 1; i < data.length; i++) {
-            // 1つのデータを正しい位置に挿入する処理
-            int tmp = data[i]; // 挿入するデータをtmpに代入
-            int k; // 挿入するデータの添字をkに代入
+    public static void sort(int[] data) {
+        for (int i = 1; i < data.length; i++) { // 最初は左端の要素を操作済みとみなすのでi=1から始める
+            int tmp = data[i]; // 挿入する要素をtmpに代入
+            int k;
             for (k = i; k > 0 && data[k - 1] > tmp; k--) {
-                data[k] = data[k - 1]; // 挿入したいデータより大きいデータを後ろの要素に移動する（data[k - 1]が空く）
+                data[k] = data[k - 1]; // 左の操作済みの要素と比較し、挿入する要素よりも大きかった場合、入れ替える
             }
             data[k] = tmp; // 空いた要素にデータを挿入する
         }

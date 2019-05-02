@@ -13,16 +13,9 @@ POINT
  */
 package searching;
 
-import searching.abstract_object.AbstractSearch;
+public class BinarySearch {
 
-public class BinarySearch extends AbstractSearch {
-
-    BinarySearch(int[] data, int target) {
-        super(data, target);
-    }
-
-    @Override
-    public int search() {
+    public static int search(int[] data, int target) {
         int head = 0;
         int tail = data.length - 1;
         while (head <= tail) {

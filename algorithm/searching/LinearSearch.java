@@ -4,16 +4,9 @@
  */
 package searching;
 
-import searching.abstract_object.AbstractSearch;
+public class LinearSearch {
 
-public class LinearSearch extends AbstractSearch {
-
-    LinearSearch(int[] data, int target) {
-        super(data, target);
-    }
-
-    @Override
-    public int search() {
+    public static int search(int[] data, int target) {
         for (int i = 0; i < data.length; i++) {
             if (data[i] == target) {
                 return i;

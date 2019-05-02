@@ -13,8 +13,7 @@ class BoyerMooreTest {
         String pattern = "漢字";
         int expected = 3;
 
-        BoyerMoore boyerMoore = new BoyerMoore(text, pattern);
-        int actual = boyerMoore.search();
+        int actual = BoyerMoore.search(text, pattern);
 
         assertEquals(expected, actual);
     }
@@ -24,8 +23,7 @@ class BoyerMooreTest {
         String pattern = "漢方";
         int expected = -1;
 
-        BoyerMoore boyerMoore = new BoyerMoore(text, pattern);
-        int actual = boyerMoore.search();
+        int actual = BoyerMoore.search(text, pattern);
 
         assertEquals(expected, actual);
     }

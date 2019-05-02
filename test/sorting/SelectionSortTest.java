@@ -11,8 +11,7 @@ class SelectionSortTest {
         int[] data = {12, 13, 11, 14, 10};
         int[] expected = {10, 11, 12, 13, 14};
 
-        SelectionSort selectionSort = new SelectionSort(data);
-        selectionSort.sort();
+        SelectionSort.sort(data);
 
         assertArrayEquals(expected, data);
     }

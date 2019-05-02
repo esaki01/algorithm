@@ -4,16 +4,9 @@
  */
 package string_searching;
 
-import string_searching.abstract_object.AbstractStringSearch;
+public class BruteForceSearch {
 
-public class BruteForceSearch extends AbstractStringSearch {
-
-    BruteForceSearch(String text, String pattern) {
-        super(text, pattern);
-    }
-
-    @Override
-    public int search() {
+    public static int search(String text, String pattern) {
         int pt = 0; // textを照合する位置
         int pp = 0; // patternを照合する位置
 

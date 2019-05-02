@@ -16,20 +16,15 @@ import java.util.List;
 
 public class SieveOfEratosthenes {
 
-    /** 素数を見つけ出す範囲のデータ. */
-    private int[] data;
-
-    SieveOfEratosthenes(int[] data) {
-        Arrays.fill(data, 1);
-        this.data = data;
-    }
-
     /**
      * 数値の配列から素数を見つけ出す.
      *
+     * @param data データ配列
      * @return 素数のリスト
      */
-    public List<Integer> calculate() {
+    public static List<Integer> calculate(int[] data) {
+        Arrays.fill(data, 1);
+
         // kがデータ数−1の平方根以下の間繰り返す
         for (int k = 2; k * k <= data.length - 1;) {
             // 素数kの倍数を取り除く

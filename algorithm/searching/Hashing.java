@@ -14,20 +14,9 @@ POINT
  */
 package searching;
 
-import searching.abstract_object.AbstractSearch;
+public class Hashing {
 
-public class Hashing extends AbstractSearch {
-
-    /** ハッシュ化された検索範囲のデータ配列. */
-    private int[] hashData;
-
-    Hashing(int[] data, int target) {
-        super(data, target);
-        this.hashData = store(data);
-    }
-
-    @Override
-    public int search() {
+    public static int search(int[] hashData, int target) {
         int k = hash(target);
         while (hashData[k] != 0) {
             if (hashData[k] == target) {
@@ -44,7 +33,7 @@ public class Hashing extends AbstractSearch {
      * @param data 検索範囲のデータ配列
      * @return ハッシュ化された検索範囲のデータ配列
      */
-    private static int[] store(int[] data) {
+    public static int[] store(int[] data) {
         int[] hashedData = new int[11];
         for (int i = 0; i < data.length; i++) {
             int k = hash(data[i]);

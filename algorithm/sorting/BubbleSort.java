@@ -12,16 +12,9 @@ POINT
  */
 package sorting;
 
-import sorting.abstract_object.AbstractSort;
+public class BubbleSort {
 
-public class BubbleSort extends AbstractSort {
-
-    BubbleSort(int[] data) {
-        super(data);
-    }
-
-    @Override
-    public void sort() {
+    public static void sort(int[] data) {
         for (int k = 0; k < data.length - 1; k++) {
             // 最小値を左端に移動する処理
             for (int i = data.length - 1; i > k; i--) {
@@ -32,11 +25,11 @@ public class BubbleSort extends AbstractSort {
                     data[i] = tmp;
                 }
             }
-            // 左端の要素が1つ確定
+            // 左端の要素からソート済みにしていく
         }
     }
 
-    public void sort2() {
+    public static void sort2(int[] data) {
         for (int k = 0; k < data.length - 1; k++) {
             // 最小値を左端に移動する処理
             int exchange = 0; // 交換回数

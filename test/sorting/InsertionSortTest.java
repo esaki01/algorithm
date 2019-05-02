@@ -11,8 +11,7 @@ class InsertionSortTest {
         int[] data = {5, 3, 4, 1, 2};
         int[] expected = {1, 2, 3, 4, 5};
 
-        InsertionSort insertionSort = new InsertionSort(data);
-        insertionSort.sort();
+        InsertionSort.sort(data);
 
         assertArrayEquals(expected, data);
     }

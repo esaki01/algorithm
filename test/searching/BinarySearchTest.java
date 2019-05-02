@@ -13,8 +13,7 @@ class BinarySearchTest {
         int target = 17;
         int expected = 2;
 
-        BinarySearch binarySearch = new BinarySearch(data, target);
-        int actual = binarySearch.search();
+        int actual = BinarySearch.search(data, target);
 
         assertEquals(expected, actual);
     }
@@ -24,8 +23,7 @@ class BinarySearchTest {
         int target = 18;
         int expected = -1;
 
-        BinarySearch binarySearch = new BinarySearch(data, target);
-        int actual = binarySearch.search();
+        int actual = BinarySearch.search(data, target);
 
         assertEquals(expected, actual);
     }

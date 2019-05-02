@@ -6,16 +6,9 @@ Boyer-Moore法（BM法）.
  */
 package string_searching;
 
-import string_searching.abstract_object.AbstractStringSearch;
+public class BoyerMoore {
 
-public class BoyerMoore extends AbstractStringSearch {
-
-    BoyerMoore(String text, String pattern) {
-        super(text, pattern);
-    }
-
-    @Override
-    public int search() {
+    public static int search(String text, String pattern) {
         int pt; // textを照合する位置
         int pp; // patternを照合する位置
         int textLen = text.length(); // textの文字数

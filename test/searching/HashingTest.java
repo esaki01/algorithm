@@ -13,8 +13,8 @@ class HashingTest {
         int target = 36;
         int expected = 4;
 
-        Hashing hashing = new Hashing(data, target);
-        int actual = hashing.search();
+        int[] hashData = Hashing.store(data);
+        int actual = Hashing.search(hashData, target);
 
         assertEquals(expected, actual);
     }
@@ -24,8 +24,8 @@ class HashingTest {
         int target = 37;
         int expected = -1;
 
-        Hashing hashing = new Hashing(data, target);
-        int actual = hashing.search();
+        int[] hashData = Hashing.store(data);
+        int actual = Hashing.search(hashData, target);
 
         assertEquals(expected, actual);
     }

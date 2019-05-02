@@ -13,19 +13,12 @@ POINT
  */
 package sorting;
 
-import sorting.abstract_object.AbstractSort;
+public class HeapSort {
 
-public class HeapSort extends AbstractSort {
-
-    HeapSort(int[] data) {
-        super(data);
-    }
-
-    @Override
-    public void sort() {
+    public static void sort(int[] data) {
         // data[i] 〜 data[data.length - 1]をヒープ化
         for (int i = (data.length - 1) / 2; i >= 0; i--) {
-            downHeap(i, data.length - 1);
+            downHeap(data, i, data.length - 1);
         }
 
         for (int i = data.length - 1; i > 0; i--) {
@@ -35,17 +28,18 @@ public class HeapSort extends AbstractSort {
             data[i] = tmp;
 
             // data[0] 〜 data[i - 1]をヒープ化
-            downHeap(0, i - 1);
+            downHeap(data, 0, i - 1);
         }
     }
 
     /**
      * data[left] 〜 data[right]をヒープ化
      *
+     * @param data データ配列
      * @param left 左端の要素のインデックス
      * @param right 右端の要素のインデックス
      */
-    private void downHeap(int left, int right) {
+    private static void downHeap(int[] data, int left, int right) {
         int root = data[left]; // 根
         int child; // 大きいほうの子
         int parent; // 親

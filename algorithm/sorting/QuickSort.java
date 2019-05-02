@@ -10,28 +10,9 @@ POINT
  */
 package sorting;
 
-import sorting.abstract_object.AbstractSort;
+public class QuickSort {
 
-public class QuickSort extends AbstractSort {
-
-    /** 左端の要素のインデックス. */
-    private int left;
-
-    /** 左端の要素のインデックス. */
-    private int right;
-
-    QuickSort(int[] data, int left, int right) {
-        super(data);
-        this.left = left;
-        this.right = right;
-    }
-
-    @Override
-    public void sort() {
-        sort(left, right);
-    }
-
-    private void sort(int left, int right) {
+    public static void sort(int[] data, int left, int right) {
         // 基準値を境にして、データを大小に分ける処理
         int pl = left; // 左カーソル
         int pr = right; // 右カーソル
@@ -56,10 +37,10 @@ public class QuickSort extends AbstractSort {
 
         // 分けたデータに対して繰り返し同じ処理を実行する処理
         if (left < pr) {
-            sort(left, pr);
+            sort(data, left, pr);
         }
         if (pl < right) {
-            sort(pl, right);
+            sort(data, pl, right);
         }
     }
 }

@@ -13,16 +13,9 @@ POINT
  */
 package sorting;
 
-import sorting.abstract_object.AbstractSort;
+public class ShellSort {
 
-public class ShellSort extends AbstractSort {
-
-    ShellSort(int[] data) {
-        super(data);
-    }
-
-    @Override
-    public void sort() {
+    public static void sort(int[] data) {
         int h;
         for (h = 1; h < data.length / 9; h = h * 3 + 1) {} // hの初期値を求める（「data.length / 9」を超えない最大値）
 

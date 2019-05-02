@@ -13,8 +13,7 @@ class KnuthMorrisPrattTest {
         String pattern = "漢字";
         int expected = 3;
 
-        KnuthMorrisPratt kmp = new KnuthMorrisPratt(text, pattern);
-        int actual = kmp.search();
+        int actual = KnuthMorrisPratt.search(text, pattern);
 
         assertEquals(expected, actual);
     }
@@ -24,8 +23,7 @@ class KnuthMorrisPrattTest {
         String pattern = "漢方";
         int expected = -1;
 
-        KnuthMorrisPratt kmp = new KnuthMorrisPratt(text, pattern);
-        int actual = kmp.search();
+        int actual = KnuthMorrisPratt.search(text, pattern);
 
         assertEquals(expected, actual);
     }
