@@ -18,8 +18,8 @@ public class BubbleSort {
         for (int k = 0; k < data.length - 1; k++) {
             // 最小値を左端に移動する処理
             for (int i = data.length - 1; i > k; i--) {
+                // 昇順になっていなければ入れ替える
                 if (data[i - 1] > data[i]) {
-                    // 昇順になっていなければ入れ替える
                     int tmp = data[i - 1];
                     data[i - 1] = data[i];
                     data[i] = tmp;

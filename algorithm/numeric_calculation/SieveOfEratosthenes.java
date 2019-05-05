@@ -37,6 +37,7 @@ public class SieveOfEratosthenes {
                 k++;
             } while (data[k] == 0);
         }
+
         // 素数である添字をリストに格納し、返却する
         List<Integer> list = new ArrayList<>();
         for (int i = 2; i <= data.length - 1; i++) {

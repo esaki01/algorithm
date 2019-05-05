@@ -12,19 +12,27 @@ package sorting;
 
 public class QuickSort {
 
-    public static void sort(int[] data, int left, int right) {
+    public static void sort(int[] data) {
+        sort(data, 0, data.length - 1);
+    }
+
+    private static void sort(int[] data, int left, int right) {
         // 基準値を境にして、データを大小に分ける処理
         int pl = left; // 左カーソル
         int pr = right; // 右カーソル
         int pivot = data[(pl + pr) / 2]; // 枢軸（中央の要素）
 
         while (pl <= pr) {
+            // 枢軸より大きい値を探す
             while (data[pl] < pivot && pl < right) {
-                pl++; // 枢軸より大きい値を探す
+                pl++;
             }
+
+            // 枢軸より小さい値を探す
             while (data[pr] > pivot && pr > left) {
-                pr--; // 枢軸より小さい値を探す
+                pr--;
             }
+
             if (pl <= pr) {
                 int tmp = data[pl];
                 data[pl] = data[pr];

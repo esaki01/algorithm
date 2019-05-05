@@ -28,6 +28,7 @@ public class EightQueenProblem {
                     !flag_b[i + j] && // ／対角線に未配置
                     !flag_c[i - j + 7]) {  // ＼対角線に未配置
                 pos[i] = j;
+
                 if (i == 7) {
                     print();
                 } else {

@@ -20,6 +20,7 @@ public class SelectionSort {
                     indexMin = k;
                 }
             }
+
             // 入れ替える処理
             int tmp = data[i]; // 先頭の要素のデータをtmpに代入する
             data[i] = data[indexMin]; // 最小値が入っている要素のデータを先頭の要素に代入する
