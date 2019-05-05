@@ -34,15 +34,15 @@ public class Hashing {
      * @return ハッシュ化された検索範囲のデータ配列
      */
     public static int[] store(int[] data) {
-        int[] hashedData = new int[11];
+        int[] hashData = new int[11];
         for (int i = 0; i < data.length; i++) {
             int k = hash(data[i]);
-            if (hashedData[k] != 0) {
+            if (hashData[k] != 0) {
                 k = (k + 1) % 11;
             }
-            hashedData[k] = data[i];
+            hashData[k] = data[i];
         }
-        return hashedData;
+        return hashData;
     }
 
     /**
